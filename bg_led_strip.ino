@@ -179,9 +179,9 @@ void loop() {
       https.end();
     }
     // 5 minute delay until next fetch.
-    // TODO: This timer might need to be updated since a few seconds pass in the updateStrip function. This
+    // TODO: This timer might need to be updated since a few seconds pass in the update_strip_pattern function. This
     //       causes a time drift meaning an occasional missed BG update might occur.
-    // display_bg_level takes 500 + 100*numPixels to complete, so subtract that here.
+    // display_bg_level takes roughly 500 + 100*numPixels to complete, so subtract that here.
     delay(1000 * 60 * 5 - 500 - 100 * LED_COUNT);
   } else {
     Serial.printf("[HTTPS] Unable to connect\n");
